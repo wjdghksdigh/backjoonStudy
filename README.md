@@ -12,7 +12,7 @@ const fs = require("fs"); <br>
 const input = fs.readFileSync("/dev/stdin").toString().split(' '); <br>
 </p>
 <p>문자열로 받아온 데이터를 ' '공백을 기준으로 나누어서 input에 배열로 저장하는 코드 </p>
-<p>2️⃣ 문제 풀기</p>
+<p>2️⃣ 문제 풀기 - 모듈을 추가 해주면 js로 문제 풀이가 가능하다 </p>
 <p>
 const fs = require("fs"); <br>
 
@@ -29,7 +29,7 @@ const b = arr[1]; <br>
 
 console.log(a+b);   <br>
 </p>
-<p> 위 코드는 이렇게도 변한 가능 </p>
+<p> 3️⃣ 위 코드는 이렇게도 변한 가능 </p>
 <p>
 const fs = require("fs"); <br>
 const [a,b] = fs.readFileSync("/dev/stdin").toString().split(' ').map(v=>parseInt(v,10)); <br>

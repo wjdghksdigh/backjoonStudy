@@ -1,31 +1,42 @@
 
 
-<h1 align="center">  backjoonStudy </h1>
+<h1 align="center">  backjoonStudy 🧑🏻‍💻 </h1>
 <br><br>
-<h2> node.js로 백준 알고리즘 풀이 제출 </h2>
+<h2> node.js로 백준 알고리즘 풀이 제출 ✍🏼 </h2>
 <h3> javascript로 풀 수 없어 node.js로 제출하기 <h3>
+  <p> 모듈을 추가해주면 문제풀기가 가능하다</p>
 <br>
-<p> fs 모듈 이용 </p>
+<p> fs 모듈 추가하기 </p>
 <p>
-
-// 파일을 읽어오기 위해 Node.js의 built-in file system module fs 사용
-var fs = require('fs'); 
-
-//input을 읽어와 변수로 선언 & 할당
-// 그 내용을 input에 저장, toString(), split()을 사용해서
-// Array로 저장된다.
-var input = fs.readFileSync('/dev/stdin').toString().split(' ');
-
-// input에서 지정한 value를 읽어와 다른 변수로 선언하고 활용
-// toString메소드로 지금은 string이기 때문에, parseInt로 숫자로 형태변환을 해준다.
-var a = parseInt(input[0]);
-var b = parseInt(input[1]);
-
-console.log(a + b)
-
-* 백준 밖에서 풀어볼때는 input값을 담은 txt파일을 만들어서 readFileSync에 담으면 된다. 백준에서는 /dev/stdin을 넣으면 된다.
-
+const fs = require("fs"); <br>
+const input = fs.readFileSync("/dev/stdin").toString().split(' '); <br>
 </p>
+<p>문자열로 받아온 데이터를 ' '공백을 기준으로 나누어서 input에 배열로 저장하는 코드 </p>
+<p>문제 풀기</p>
+<p>
+const fs = require("fs"); <br>
 
+const input = fs.readFileSync("/dev/stdin").toString().split(' '); <br>
+const arr = []; <br>
+
+for(let i=0; i<input.length;i++){ <br>
+    arr.push(parseInt(input[i],10)); <br>
+}
+
+const a = arr[0]; <br>
+const b = arr[1]; <br>
+
+
+console.log(a+b);   <br>
+</p>
+<p> 위 코드는 이렇게도 변한 가능 </p>
+<p>
+const fs = require("fs"); <br>
+const [a,b] = fs.readFileSync("/dev/stdin").toString().split(' ').map(v=>parseInt(v,10)); <br>
+console.log(a+b); <br>
+</p>
+  
+  
+  
 
 

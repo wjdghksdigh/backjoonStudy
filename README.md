@@ -6,13 +6,13 @@
 <h3> javascript로 풀 수 없어 node.js로 제출하기 <h3>
   <p> 모듈을 추가해주면 문제풀기가 가능하다</p>
 <br>
-<p> fs 모듈 추가하기 </p>
+<p> 1️⃣ fs 모듈 추가하기 </p>
 <p>
 const fs = require("fs"); <br>
 const input = fs.readFileSync("/dev/stdin").toString().split(' '); <br>
 </p>
 <p>문자열로 받아온 데이터를 ' '공백을 기준으로 나누어서 input에 배열로 저장하는 코드 </p>
-<p>문제 풀기</p>
+<p>2️⃣ 문제 풀기</p>
 <p>
 const fs = require("fs"); <br>
 
